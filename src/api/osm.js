@@ -38,9 +38,9 @@ export async function fetchCastlesFromOSM(isoA3) {
       const lat = el.lat ?? el.center?.lat;
       const lon = el.lon ?? el.center?.lon;
       return {
-        id:       `${el.type}/${el.id}`,
-        name:     el.tags?.name || "Castle",
-        tags:     el.tags || {},
+        id: `${el.type}/${el.id}`,
+        name: el.tags?.name || "Castle",
+        tags: el.tags || {},
         position: [lat, lon],
       };
     });
